@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <select class="js-select">
+        <option>nib</option>
+        <option selected>bupa</option>
+        <option>hcf</option>
+        <option>medibank</option>
+    </select>
+
+    <script src="../build/build.js"></script>
+    <script>
+
+        var select = require('select');
+
+        select(document.querySelector('.js-select'))
+            .on('selected', function() {
+                console.log('selected:', this.value, this.values);
+            })
+            .on('changed', function() {
+                console.log('changed:', this.value, this.values);
+            })
+            .select(3)
+            .select(null)
+        ;
+
+    </script>
+</body>
+</html>

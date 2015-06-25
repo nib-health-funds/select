@@ -1,0 +1,19 @@
+{
+  "name": "@nib/select",
+  "version": "0.1.0",
+  "dependencies": {
+    "digitaledgeit-view": "^0.1.10"
+  },
+  "devDependencies": {
+    "@jameslnewell/click": "git://github.com/jameslnewell/click",
+    "consolify": "^2.0.1",
+    "mocaccino": "^1.5.2",
+    "mocha": "^2.2.5"
+  },
+  "browser": {
+    "view": "digitaledgeit-view"
+  },
+  "scripts": {
+    "build": "browserify -r ./index.js:select -o build/build.js"
+  }
+}
